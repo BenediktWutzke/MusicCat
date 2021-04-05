@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicCat Soundboard</title>
+    <link rel="stylesheet" href="button_style.css">
+    <link rel="icon" href="musiccat_logo.png"/>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: 'Consolas';
+        }
+
+        body {
+            background-color:#212121;
+        }
+
+        header img {
+            width: 100px;
+            margin: 10px;
+            float: left;
+        }
+
+        header div.name {
+            padding-top: 20px;
+            padding-bottom: 5px;
+        }
+
+        header div.name h1 {
+            color: white;
+            display: inline;
+        }
+
+        header div.name h1.status {
+            color: green;
+        }
+
+        header div.menu form button {
+            padding: 0px 10px;
+            margin: 0px;
+        }
+
+        header div.menu form {
+            display: inline;
+        }
+
+        section {
+            margin-top: 50px;
+        }
+
+        section form {
+            display: inline;
+        }
+
+        section form button {
+            padding: 15px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="musiccat_logo.png"/>
+        
+        <div class="name">
+            <h1>MusicCat</h1>
+            <h1 class="status"><%= status %></h1>
+        </div>
+
+        <div class="menu">
+            <form action="/join-me" method="POST">
+                <button>Join me</button>
+            </form>
+            
+            <form action="/join-channel" method="POST">
+                <button>Join channel</button>
+            </form>
+
+            <form action="/leave" method="POST">
+                <button>Leave</button>
+            </form>
+        </div>
+    </header>
+
+    <section>
+        <%- buttons %>
+    </section>
+</body>
+</html>

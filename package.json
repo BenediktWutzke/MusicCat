@@ -1,0 +1,25 @@
+{
+  "name": "musiccat",
+  "version": "0.1.0",
+  "description": "Discord Soundboard Bot with Web-Dashboard",
+  "main": "./website/server.js",
+  "scripts": {
+    "bot": "node ./discord_bot/client.js",
+    "server": "node ./website/server.js"
+  },
+  "keywords": [],
+  "author": "Benedikt Wutzke",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.4.0",
+    "discord.js": "^12.3.1",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "ffmpeg": "^0.0.4",
+    "ffmpeg-static": "^4.2.7",
+    "fluent-ffmpeg": "^2.1.2",
+    "prompt-sync": "^4.2.0",
+    "ws": "^7.3.1",
+    "ytdl-core": "^4.4.5"
+  }
+}
